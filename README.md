@@ -1,6 +1,7 @@
 # Gait Analysis Markerless
 
 [![Python](https://img.shields.io/badge/python-3.9%20%7C%203.11-blue)](https://www.python.org/)
+[![Python Syntax Check](https://github.com/Nashhansyah/Gait-Analysis-System/actions/workflows/python-syntax.yml/badge.svg)](https://github.com/Nashhansyah/Gait-Analysis-System/actions/workflows/python-syntax.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)](#requirements)
 
