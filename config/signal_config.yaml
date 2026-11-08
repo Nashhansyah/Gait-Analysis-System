@@ -1,0 +1,53 @@
+# Signal Preprocessing Configuration
+# ===================================
+
+# Tahap 1: Confidence Filtering (Penyaringan Berdasarkan Tingkat Kepercayaan)
+# Keypoint dengan nilai confidence di bawah threshold akan ditandai sebagai NaN
+confidence_filtering:
+  enabled: true
+  default_threshold: 0.3  # Threshold default untuk keypoint umum
+  critical_keypoints:     # Keypoint krusial menggunakan threshold lebih tinggi
+    RAnkle: 0.4
+    LAnkle: 0.4
+    MidHip: 0.4
+
+# Tahap 2: Gap Filling (Pengisian Celah Data)
+# Mengisi data yang hilang (NaN) dengan interpolasi linier
+gap_filling:
+  method: "linear"
+  max_gap_frames: 10  # Maksimal 10 frame berturut-turut untuk interpolasi
+  fallback:           # Fallback jika gap > max_gap_frames
+    - "backward"      # Backward fill
+    - "forward"       # Forward fill
+
+# Tahap 3: Savitzky-Golay Filter (Untuk Deteksi Gait Event)
+# Mempertahankan fitur penting sinyal seperti peak dan valley
+savgol_filter:
+  enabled: true
+  window_length: 11   # Panjang window (harus ganjil)
+  polyorder: 2        # Order polynomial
+
+# Tahap 2.5: Median Filter (Untuk Menghilangkan Spike)
+# Menggantikan setiap nilai dengan median dari nilai-nilai sekitarnya
+# Efektif untuk menghilangkan spike tanpa mempengaruhi sinyal smooth
+median_filter:
+  enabled: true
+  kernel_size: 5  # Harus ganjil, menggunakan 5 sampel untuk menghitung median
+
+# Tahap 3: Butterworth Low-Pass Filter (Untuk Analisis Parameter Gait)
+# Menghilangkan noise frekuensi tinggi untuk perhitungan parameter
+butterworth_filter:
+  enabled: true
+  type: "lowpass"
+  order: 2
+  cutoff_freq: 2.5    # Hz - sesuai karakteristik gait manusia (1-2 Hz fundamental)
+
+# Outlier handling (disabled by default)
+outlier_handling:
+  enabled: false
+  method: "velocity"
+  velocity_threshold: 2000.0  # pixels/s
+
+# Resampling
+resampling:
+  target_fps: 30  # Target frame rate for consistency

@@ -1,0 +1,23 @@
+# OpenPose Configuration
+openpose:
+  executable_path: "C:/openpose/bin/OpenPoseDemo.exe"
+  model_folder: "C:/openpose/models"
+  model_pose: "BODY_25"
+  output_format: "json"
+  
+# BODY_25 Joint Indices for Gait Analysis
+joints:
+  # Lower body joints (relevant for gait)
+  mid_hip: 8
+  right_hip: 9
+  right_knee: 10
+  right_ankle: 11
+  left_hip: 12
+  left_knee: 13
+  left_ankle: 14
+  
+# Processing options
+options:
+  number_people_max: 1
+  display: 0
+  render_pose: 1

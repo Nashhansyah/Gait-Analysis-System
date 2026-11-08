@@ -1,0 +1,36 @@
+# ===== Data proyek (video, frame, keypoint, hasil analisis) =====
+data/
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# ===== Environment & Python artifacts =====
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ===== Log & file sementara =====
+error.log
+*.log
+*.tmp
+*.bkp
+~$*
+
+# ===== Aset desain/dokumen (tidak di-commit) =====
+*.drawio
+*.drawio.bkp
+perancangan/
+*.docx
+*.png
+prd.md
+
+# ===== OS / editor =====
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

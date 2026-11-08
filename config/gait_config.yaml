@@ -1,0 +1,23 @@
+# Gait Analysis Configuration
+
+gait_cycle:
+  min_duration: 0.6  # seconds
+  max_duration: 2.0  # seconds
+  
+stance_swing:
+  stance_ratio_min: 0.50  # 50% of cycle
+  stance_ratio_max: 0.70  # 70% of cycle
+  
+event_detection:
+  heel_strike:
+    min_peak_distance: 15  # frames
+    min_prominence: 0.02   # meters
+  toe_off:
+    search_window_start: 0.30  # 30% of cycle
+    search_window_end: 0.80    # 80% of cycle
+    
+biomechanical_constraints:
+  min_step_length: 0.20   # meters
+  max_step_length: 1.00   # meters
+  min_step_time: 0.25     # seconds
+  max_step_time: 1.50     # seconds
