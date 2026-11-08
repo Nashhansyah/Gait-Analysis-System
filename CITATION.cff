@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software in research or a clinical project, please cite it as below."
+title: "Gait Analysis Markerless"
+abstract: "A PyQt5 desktop application for markerless gait analysis from single-camera sagittal video using OpenPose, with signal preprocessing, pixel-to-meter scaling, manual leg-ID and gait-event correction, spatiotemporal parameter extraction, joint kinematics, and CSV/Excel reporting."
+type: software
+authors:
+  - family-names: "Nashhansyah"
+    alias: "Nashhansyah"
+version: "0.1.0"
+date-released: 2026-11-08
+license: MIT
+repository-code: "https://github.com/Nashhansyah/Gait-Analysis-System"
+url: "https://github.com/Nashhansyah/Gait-Analysis-System"
+keywords:
+  - gait analysis
+  - markerless
+  - openpose
+  - pose estimation
+  - biomechanics
+  - rehabilitation
+  - computer vision
+  - PyQt5

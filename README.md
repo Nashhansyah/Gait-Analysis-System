@@ -1,8 +1,38 @@
 # Gait Analysis Markerless
 
+[![Python](https://img.shields.io/badge/python-3.9%20%7C%203.11-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)](#persyaratan)
+
 Aplikasi desktop untuk analisis gaya berjalan (*gait analysis*) **markerless** berbasis **OpenPose** dari video sagittal satu kamera. Pipeline lengkap mulai dari ekstraksi pose, pembersihan sinyal, kalibrasi skala, koreksi manual, deteksi gait event, hingga perhitungan parameter dan ekspor laporan.
 
 Antarmuka dibangun dengan **PyQt5** dan terdiri dari 4 halaman utama: **Homepage**, **Analysis**, **Report**, dan **Monitoring**.
+
+**English:** [README.en.md](README.en.md)
+
+---
+
+## Demo
+
+> 🎬 GIF singkat (video berjalan → skeleton overlay → plot fase gait) dan screenshot GUI akan ditambahkan di sini.
+
+<!--
+Setelah file media ditaruh di docs/images/, ganti bagian ini dengan:
+
+| Homepage | Pipeline analisis |
+|:--:|:--:|
+| ![Homepage](docs/images/dashboard.png) | ![Pipeline](docs/images/analysis.png) |
+
+| Report & fase gait | Tren monitoring |
+|:--:|:--:|
+| ![Report](docs/images/report.png) | ![Monitoring](docs/images/monitoring.png) |
+
+![Demo pipeline](docs/images/demo.gif)
+-->
+
+Alur singkat: buat subject dan session → jalankan wizard 6 tahap → buka Report untuk melihat
+video tersinkron dengan grafik fase STANCE/SWING → ekspor Excel multi-sheet berisi parameter
+spasiotemporal, siklus gait, detail per langkah, dan kinematik sendi.
 
 ---
 
@@ -258,6 +288,14 @@ Folder `data/`, `.venv/`, `__pycache__/`, serta aset desain (`*.drawio`, `*.docx
 
 ---
 
+## Sitasi
+
+Jika perangkat lunak ini dipakai dalam penelitian atau proyek klinis, silakan sitasi menggunakan metadata di [CITATION.cff](CITATION.cff).
+
+---
+
 ## Lisensi
+
+Dirilis di bawah [MIT License](LICENSE).
 
 © 2026 Gait Analysis Markerless

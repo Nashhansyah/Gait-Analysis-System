@@ -29,6 +29,9 @@ perancangan/
 *.png
 prd.md
 
+# Dokumentasi/screenshot repo tetap dilacak
+!docs/images/*.png
+
 # ===== OS / editor =====
 .DS_Store
 Thumbs.db
