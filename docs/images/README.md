@@ -1,7 +1,7 @@
 # Media untuk README
 
 Taruh file screenshot/GIF di folder ini dengan nama berikut, lalu buka komentar blok
-gambar di `README.md` dan `README.en.md`.
+gambar di `README.md` (English) dan `README.id.md` (Bahasa Indonesia).
 
 | Nama file | Isi yang disarankan |
 |---|---|
